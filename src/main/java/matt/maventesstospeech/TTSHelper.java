@@ -55,8 +55,8 @@ public class TTSHelper implements Runnable {
     }
     
     public void initService(){
-        String accessKeyId = "AKIAYAWY5Q6NPPWHUDFO";
-        String secretAccessKey = "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";
+        String accessKeyId = "0";
+        String secretAccessKey = "0";
 
         // Initialize Amazon Polly client
         BasicAWSCredentials awsCredentials = new BasicAWSCredentials(accessKeyId, secretAccessKey);
