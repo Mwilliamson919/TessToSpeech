@@ -17,7 +17,7 @@ public class ResultPane extends javax.swing.JInternalFrame {
         initComponents();
         this.setClosable(true);
         this.setMaximizable(true);
-        
+        resultsArea.setEditable(false);
     }
 
     /**
