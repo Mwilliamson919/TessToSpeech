@@ -128,7 +128,7 @@ public class Menu extends javax.swing.JFrame {
         if (!selectedImage.equals(null)){
             try {
                 String result = TessHelper.instance.doOCR(selectedImage);
-                ttsHelper.setCurrentAudioFromString(result);
+                ttsHelper.setCurrentAudio(result);
                 Thread audioThread = new Thread(ttsHelper);
                 audioThread.start();
                 ResultPane results = new ResultPane();
@@ -136,10 +136,6 @@ public class Menu extends javax.swing.JFrame {
                 results.setVisible(true);
                 this.add(results);
             } catch (TesseractException ex) {
-                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (JavaLayerException ex) {
                 Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
